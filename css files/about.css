@@ -1,0 +1,273 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Top Header Bar */
+.top-header {
+    background-color: #0B7A9A;
+    color: white;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header-left {
+    display: flex;
+    gap: 20px;
+}
+
+.badge {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.search-container {
+    display: flex;
+    gap: 5px;
+}
+
+.search-container input {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 6px 16px;
+    background-color: white;
+    color: #0B7A9A;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-container button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Main Header */
+.main-header {
+    background-color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-section {
+    flex-shrink: 0;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.header-nav a:hover {
+    color: #0B7A9A;
+}
+
+.enquire-btn {
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    padding: 10px 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.enquire-btn:hover {
+    background-color: #FFC700;
+}
+
+.language-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Main Menu */
+.main-menu {
+    background-color: #0B7A9A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: #095770;
+}
+
+/* Original Styles */
+#myh1 {
+    margin-left: 20mm;
+    margin-top: 30px;
+}
+
+#logo {
+    width: 40mm;
+    height: 14mm;
+    display: inline;
+}
+
+#welcome {
+    padding: 3px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-bottom: 2px solid #e0e0e0;
+    margin-top: 20px;
+}
+
+.nav-item {
+    padding: 16px 32px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    transition: background 0.2s;
+}
+
+.nav-item:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+.nav-item.active {
+    background-color: #0490b3;
+    font-weight: bold;
+    color: #464141e8;
+}
+
+.nav-item:hover {
+    color: #000;
+    background-color: #0490b3;
+}
+
+.section {
+    width: 42%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1% 1%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.section p {
+    color: #333;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.green h3 {
+    background-color: #4CAF50;
+}
+
+.purple h3 {
+    background-color: #7B1FA2;
+}
+
+.orange h3 {
+    background-color: #FF9800;
+}
+
+.teal h3 {
+    background-color: #009688;
+}
+
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .main-menu {
+        flex-direction: column;
+    }
+    
+    .header-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .top-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+#blackbox {
+    width: 100%;
+    height: 15cm;
+    background-color: #0b0b0bf9;
+}
+
+#contact {
+    margin-left: auto;
+    margin-top: auto;
+    color: whitesmoke;
+    margin-left: 5mm;
+    margin-top: 5mm;
+    width: 60mm;
+    height: fit-content;
+    box-shadow: 2px 2px 5px whitesmoke;
+    text-align: left;
+    padding: 10px;
+}
+
+#contact > p > a {
+    color: rgba(245, 245, 245, 0.782);
+}
