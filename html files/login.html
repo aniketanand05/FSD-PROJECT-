@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DSU Admission Registration Replica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* Placeholder background image. Set src in url('') below */
+            background: url('https://dsu.edu.in/scms-national-conference/img/gallery-21.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background: rgba(65, 185, 245, 0.95);
+            max-width: 380px;
+            width: 94vw;
+            padding: 32px 28px;
+            margin: 80px auto 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 36px rgba(0,0,0,0.16);
+            text-align: center;
+            opacity: 80%;
+        }
+        .login-logo {
+            margin-bottom: 14px;
+        }
+        .login-input, .login-select {
+            width: 96%;
+            padding: 11px;
+            margin: 12px 0;
+            border: 1.2px solid #bbb;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .login-btn {
+            background-color: #163173;
+            color: #fff;
+            border: none;
+            padding: 13px 0;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+        .login-btn:hover {
+            background-color: #155eb6;
+        }
+        .login-links {
+            margin-top: 16px;
+            font-size: 14px;
+        }
+        .login-links a {
+            color: #163173;
+            text-decoration: none;
+            margin: 0 7px;
+        }
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+        /* body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* Placeholder background image. Set src in url('') below */
+    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fdsu.edu.in%2Fscms-national-conference%2F&psig=AOvVaw0IgOYkmCqF037MqkVtSiZr&ust=1762956422405000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJjTisui6pADFQAAAAAdAAAAABAE')
+     no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+} */
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Optional logo at top -->
+        <img src="https://f2.leadsquaredcdn.com/t/dayanandasagar1/content/common/images/DSU%20LOGO%20IN%20270-x-95%20PX.png"
+         alt="DSU Logo" class="login-logo" width="250" height="80"> 
+
+        <h2>Register</h2>
+
+        <!-- Name Field -->
+        <input
+            type="text"
+            class="login-input"
+            placeholder="Full Name"
+            id="name"
+            autocomplete="name"
+            required
+            width="300"
+            height="42"
+            <!-- Debug: Name field -->
+        
+
+        <!-- Email Field -->
+        <input
+            type="email"
+            class="login-input"
+            placeholder="Email"
+            id="email"
+            autocomplete="email"
+            required
+            width="300"
+            height="42"
+            <!-- Debug: Email field -->
+        
+
+        <!-- State Field -->
+        <input
+            type="text"
+            class="login-input"
+            placeholder="State"
+            id="state"
+            required
+            width="300"
+            height="42"
+            <!-- Debug: State field -->
+       
+
+        <!-- City Field -->
+        <input
+            type="text"
+            class="login-input"
+            placeholder="City"
+            id="city"
+            required
+            width="300"
+            height="42"
+            <!-- Debug: City field -->
+        
+        <!-- Phone Field -->
+        <input
+            type="tel"
+            class="login-input"
+            placeholder="Phone Number"
+            id="phone"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            required
+            width="300"
+            height="42"
+            <!-- Debug: Phone number field (10 digits) -->
+       
+
+        <!-- Campus Select -->
+        <select class="login-select" id="campus" required width="300" height="42">
+            <option value="" disabled selected>Select Campus</option>
+            <option value="main">Main Campus</option>
+            <option value="city">City Innovation Campus</option>
+            <!-- <option value="innov8">Innov8 Campus</option> -->
+            <!-- Add more options if needed -->
+            <!-- Debug: Campus dropdown -->
+        </select>
+
+        <!-- Program Select -->
+        <select class="login-select" id="program" required width="300" height="42">
+            <option value="" disabled selected>Select Program</option>
+            <option value="btech">B.Tech</option>
+            <option value="mba">MBA</option>
+            <option value="bsc">B.Sc</option>
+            <option value="phd">PhD</option>
+            <!-- Add more options if needed -->
+            <!-- Debug: Program dropdown -->
+        </select>
+
+        <!-- Register Button -->
+        <button class="login-btn" type="submit">Register</button>
+        <!-- Debug: Register button -->
+
+        <!-- Any additional links or info -->
+        <div class="login-links">
+            <a href="#">Already Registered?</a>
+        </div>
+        <!-- Debug: Extra links -->
+
+    </div>
+</body>
+</html>
