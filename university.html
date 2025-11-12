@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <style>
-            /* Reset */
-* {
+<head>
+<style>
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -91,6 +89,7 @@ body {
 .header-nav a:hover {
     color: #0B7A9A;
 }
+
 .enquire-btn {
     background-color: #FFD700;
     color: #333;
@@ -137,7 +136,114 @@ body {
 .menu-item.active {
     background-color: #095770;
 }
-
+.vision-wrapper {
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 0 20px 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Main title styling */
+.vision-title {
+    margin: 28px 0 16px 0;
+    font-size: 1.7em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: Georgia, serif;
+    border: none;
+}
+/* Top banner image */
+.vision-banner-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.vision-banner-img {
+    width: 540px;
+    height: 250px;
+    background: #222;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.15);
+}
+/* Blue strip */
+.vision-strip {
+    background: #33B5E5;
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 7px 0 5px 0;
+    margin: 16px 0 15px 0;
+    letter-spacing: .5px;
+}
+/* Vision-Mission boxes */
+.vision-mission-row {
+    display: flex;
+    gap: 25px;
+    margin: 22px 0 32px 0;
+}
+.vision-box {
+    flex:1;
+    background: #fff;
+    padding: 18px 15px 14px 15px;
+    display: flex;
+    align-items: flex-start;
+    min-width: 240px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px #ececec;
+    border: 1px solid #e6e6e6;
+}
+.vision-flag {
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    padding: 7px 9px 6px 9px;
+    margin-right: 15px;
+    border-radius: 4px 0 0 4px;
+    min-width: 32px;
+    text-align: center;
+}
+.vision-flag-green { background: #18bc9c; }
+.vision-flag-red { background: #e74c3c; }
+.vision-box strong {
+    font-size: 1.11em;
+}
+.vision-box p {
+    margin-top: 7px;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 0;
+}
+/* Orange values bar */
+.values-strip {
+    margin: 34px 0 17px 0;
+    background: #FFC04A;
+    color: #333;
+    text-align: center;
+    font-size: 1.07em;
+    font-weight: bold;
+    letter-spacing: .5px;
+    padding: 7px 0 6px 0;
+}
+/* Values list */
+.vision-values-list {
+    padding: 0 12px;
+    margin-top: 8px;
+    color: #222;
+}
+.vision-values-list p {
+    margin: 16px 0 0 0;
+    font-size: 15.5px;
+    text-align: center;
+}
+.vision-values-list strong {
+    font-size: 1em;
+    font-family: Arial Black,Arial,sans-serif;
+}
+@media (max-width: 900px) {
+    .vision-mission-row { flex-direction: column; gap: 10px; }
+}
 .dsu-footer {
   width: 100%;
   background: #19171C;
@@ -215,10 +321,10 @@ body {
   .footer-col { min-width: 98vw; }
   .footer-logo { min-width: 100vw; }
 }
-        </style>
-    </head>
-    <body>
-        <!-- Top Header Bar -->
+</style>
+</head>
+<body>
+    <!-- Top Header Bar -->
         <div class="top-header">
             <div class="top-header-left">
                 <span class="badge">🏆 SCIENTIFIC OFFICERS</span>
@@ -231,7 +337,7 @@ body {
         </div
         <div class="main-header">
             <div class="logo-section">
-                <img id="logo" src="https://www.dsu.edu.in/images/logo.jpg" style="width: 250px;height: 100px;">
+                <img id="logo" src="https://www.dsu.edu.in/templates/sj_university2/images/styling/default/logo.png">
             </div>
             <div class="header-nav">
                 <a href="#">Virtual Tour</a>
@@ -254,86 +360,71 @@ body {
         <!-- Main Navigation Menu -->
         <div class="main-menu">
             <a href="index.html" class="menu-item ">HOME</a>
-            <a href="university.html" class="menu-item">UNIVERSITY</a>
+            <a href="" class="menu-item active">UNIVERSITY</a>
             <a href="academics.html" class="menu-item">ACADEMICS</a>
             <a href="admission.html" class="menu-item">ADMISSIONS</a>
             <a href="international.html" class="menu-item">INTERNATIONAL</a>
             <a href="research.html" class="menu-item">RESEARCH</a>
             <a href="history.html" class="menu-item">HISTORY</a>
-            <a href="" class="menu-item active">PLACEMENT</a>
+            <a href="placement.html" class="menu-item">PLACEMENT</a>
             <a href="naac.html" class="menu-item">NAAC</a>
             <a href="library.html" class="menu-item">LIBRARY</a>
             <a href="hostel.html" class="menu-item">HOSTEL @ HAROHALLI</a>
-            <a href="https://www.dsu.edu.in/images/University/Public_Self_Disclosure_DSU.pdf"
-             class="menu-item">PUBLIC SELF-DISCLOSURE</a>
+            <a href="https://www.dsu.edu.in/images/University/Public_Self_Disclosure_DSU.pdf" 
+            class="menu-item">PUBLIC SELF-DISCLOSURE</a>
             <a href="contact.html" class="menu-item">CONTACT</a>
         </div>
-        <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;margin: 20px;">OVERVIEW</h1>
-        <img src="https://www.dsu.edu.in/images/placements/placement_banner.jpg" 
-        style="width: 1300px;height: 500px;align-self: center;margin-left: 20px;">
-        <div style="display: flex; max-width: 1500px; margin: 30px auto 0 auto; justify-content: flex-start;">
-
-    <!-- MAIN CONTENT -->
-    <div style="flex: 2; background: #fff; padding: 32px 48px 32px 24px; border-right: 1.5px solid #e0e0e0; min-height: 620px;">
-        <h2 style="color: #463e91; font-size: 1.9rem; margin-top: 0;">Training and Placement</h2>
-        <p style="font-size: 1.1rem; line-height: 1.7; color: #222; margin-bottom: 18px;">
-            The Training and Placement Cell believes in nurturing not just academic excellence but also holistic development that prepares students for the dynamic demands of the professional world. The Placement and Training Cell is a vital part of our vision, working to ensure that every student receives the guidance, exposure, and support necessary to secure a fulfilling and successful career.
-        </p>
-        <p style="font-size: 1.1rem; line-height: 1.7; color: #222; margin-bottom: 14px;">
-            The Placement & Training Cell serves as a bridge between academia and industry, equipping students with the right skills and knowledge through a comprehensive approach. From Technical Training to Soft Skills development, we focus on making students industry-ready, empowering them to excel in competitive job markets. With an impressive track record of high-profile placements and strong industry partnerships, we ensure that students have access to a wide array of career opportunities.
-        </p>
-        <ul style="margin: 22px 0 30px 24px; font-size: 1.07rem; color: #222; line-height: 1.6;">
-            <li style="margin-bottom: 6px; color: #e47a22;">
-                Placement Cell interacts with more than 500 reputed organizations for arranging campus interviews for the final year BE /B.Tech /M.Tech /B.Sc /M.Sc /MBA/ BCA/MCA/ BAJMC students.
-            </li>
-            <li style="margin-bottom: 6px; color: #e47a22;">
-                Improving the quality of placements in terms of job opportunities, companies of relevance that visit the campus and the highest and average salaries.
-            </li>
-        </ul>
-        <div style="font-weight: bold; font-size: 1.1rem; margin-top: 36px; margin-bottom: 7px; color: #252525;">MISSION</div>
-        <p style="font-size: 1.06rem; line-height: 1.65; color: #222;">
-            The mission of the Training and Placement Cell at Dayananda Sagar University is to enable and empower every student to acquire necessary skills, knowledge, and industry exposure to secure meaningful and successful careers.
-        </p>
-        <div style="font-weight: bold; font-size: 1.1rem; margin-top: 26px; margin-bottom: 7px; color: #252525;">VISION</div>
-        <p style="font-size: 1.06rem; line-height: 1.65; color: #222;">
-            To foster a culture of excellence and integrity, empowering students with the skills and opportunities to create a significant impact in the professional world.
-        </p>
+        <!-- Main Content: Vision, Mission and Values -->
+<div class="vision-wrapper">
+    <h1 class="vision-title">VISION, MISSION AND VALUES</h1>
+    <div class="vision-banner-row">
+        <!-- Main visual banner image: Paste image URL below -->
+        <img src="https://www.dsu.edu.in/images/Home/vision-mission.jpg"
+         alt="Vision Banner" class="vision-banner-img" />
     </div>
-
-    <!-- SIDEBAR MENU -->
-    <div style="flex: 1; background: #463e91; min-width: 250px; border-radius: 0 10px 10px 0;">
-        <div style="background: #463e91; color: #fff; font-weight: bold; padding: 17px 24px; font-size: 1.11rem; border-radius: 0 10px 0 0;">
-            TRAINING AND PLACEMENT
+    <div class="vision-strip">
+        THROWING LIGHT ON THE WAY FORWARD
+    </div>
+    <div class="vision-mission-row">
+        <div class="vision-box">
+            <div class="vision-flag vision-flag-green">
+                <span>DSU</span>
+            </div>
+            <div>
+                <strong>VISION</strong>
+                <p>
+                    To be a centre of excellence in education, research &amp; training, innovation &amp; entrepreneurship and to produce citizens with exceptional leadership qualities to serve national and global needs.
+                </p>
+            </div>
         </div>
-        <div style="background: #52a6dd; border-radius: 0 0 10px 10px;">
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none; background: none; font-size: 1rem;">Overview</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Announcement</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Campus Placements</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Esteemed Recruiters</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">CIL</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Facilities</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none; background: #317fb5; font-style: italic;"><em>Testimonials</em></a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Contact Us</a></li>
-            </ul>
+        <div class="vision-box">
+            <div class="vision-flag vision-flag-red">
+                <span>DSU</span>
+            </div>
+            <div>
+                <strong>MISSION</strong>
+                <p>
+                    To achieve our objectives in an environment that enhances creativity, innovation and scholarly pursuits while adhering to our vision.
+                </p>
+            </div>
         </div>
     </div>
-</div>
-
-<!-- VERTICAL ACTION BUTTONS -->
-<div style="position: fixed; right: 18px; top: 39%; z-index: 1000; display: flex; flex-direction: column; gap: 13px;">
-    <a href="login.html"><div style="width: 44px; height: 120px; background: #d53b49; color: #fff; border-radius: 7px 7px 0 0;
-        display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; font-weight: bold; letter-spacing: 2px; cursor: pointer; text-align: center;">
-        APPLY NOW
-    </div></a>
-    <div style="width: 44px; height: 44px; background: #f48a21; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-        &#x1F4DE;
+    <div class="values-strip">
+        VALUES
     </div>
-    <div style="width: 44px; height: 44px; background: #52e198; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-        &#x1F4F1;
-    </div>
-    <div style="width: 44px; height: 44px; background: #c357e1; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-        &#x1F310;
+    <div class="vision-values-list">
+        <p><strong>The Pursuit of Excellence</strong><br/>
+        A commitment to strive continuously to improve ourselves and our systems with the aim of becoming the best in our field.
+        </p>
+        <p><strong>Fairness</strong><br/>
+        A commitment to objectivity and impartiality, to earn the trust and respect of society.
+        </p>
+        <p><strong>Leadership</strong><br/>
+        A commitment to lead responsively and creatively in educational and research processes.
+        </p>
+        <p><strong>Integrity and Transparency</strong><br/>
+        A commitment to be ethical, sincere and transparent in all activities and to treat all individuals with dignity and respect.
+        </p>
     </div>
 </div>
 <!-- FOOTER SECTION -->
@@ -441,5 +532,5 @@ body {
     </div>
   </div>
 </div>
-        </body>
+</body>
 </html>

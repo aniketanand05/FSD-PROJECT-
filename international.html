@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Top Header Bar */
+.top-header {
+    background-color: #0B7A9A;
+    color: white;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header-left {
+    display: flex;
+    gap: 20px;
+}
+
+.badge {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.search-container {
+    display: flex;
+    gap: 5px;
+}
+
+.search-container input {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 6px 16px;
+    background-color: white;
+    color: #0B7A9A;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-container button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Main Header */
+.main-header {
+    background-color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-section {
+    flex-shrink: 0;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.header-nav a:hover {
+    color: #0B7A9A;
+}
+
+.enquire-btn {
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    padding: 10px 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.enquire-btn:hover {
+    background-color: #FFC700;
+}
+
+.language-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Main Menu */
+.main-menu {
+    background-color: #0B7A9A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: #095770;
+}
+/* Content Styling */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .content-wrapper h1 {
+            color: #0B7A9A;
+            margin-bottom: 15px;
+        }
+
+        .content-wrapper p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #0B7A9A;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #0B7A9A;
+            color: white;
+        }
+
+        /* Image placeholders with fixed sizes */
+        .image-placeholder {
+            display: block;
+            width: 640px;
+            height: 360px;
+            background-color: #e0e0e0;
+            border: 2px dashed #0B7A9A;
+            margin: 20px auto;
+        }
+
+        /* Video placeholder */
+        .video-placeholder {
+            display: block;
+            width: 640px;
+            height: 360px;
+            background-color: #c0c0c0;
+            border: 2px dashed #555;
+            margin: 20px auto;
+        }
+
+        </style>
+    </head>
+    <body>
+         <!-- Top Header Bar -->
+        <div class="top-header">
+            <div class="top-header-left">
+                <span class="badge">🏆 SCIENTIFIC OFFICERS</span>
+                <span class="badge">🏆 AICTE RECOGNITION</span>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search ...">
+                <button>Search</button>
+            </div>
+        </div
+        <div class="main-header">
+            <div class="logo-section">
+                <img id="logo" src="https://www.dsu.edu.in/templates/sj_university2/images/styling/default/logo.png">
+            </div>
+            <div class="header-nav">
+                <a href="#">Virtual Tour</a>
+                <a href="#">Examination</a>
+                <a href="#">News & Events</a>
+                <a href="#">Newsletter</a>
+                <a href="#">Alumni</a>
+                <a href="#">Blog</a>
+                <a href="#">ERP Login</a>
+                <a href="#">e-Brochure</a>
+                <button class="enquire-btn">Enquire Now</button>
+                <select class="language-select">
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Kannada</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Navigation Menu -->
+        <div class="main-menu">
+            <a href="index.html" class="menu-item ">HOME</a>
+            <a href="" class="menu-item">UNIVERSITY</a>
+            <a href="academics.html" class="menu-item">ACADEMICS</a>
+            <a href="" class="menu-item">ADMISSIONS</a>
+            <a href="" class="menu-item active">INTERNATIONAL</a>
+            <a href="" class="menu-item">RESEARCH</a>
+            <a href="history.html" class="menu-item">HISTORY</a>
+            <a href="placement.html" class="menu-item">PLACEMENT</a>
+            <a href="naac.html" class="menu-item">NAAC</a>
+            <a href="library.html" class="menu-item">LIBRARY</a>
+            <a href="hostel.html" class="menu-item">HOSTEL @ HAROHALLI</a>
+            <a href="" class="menu-item">PUBLIC SELF-DISCLOSURE</a>
+            <a href="contact.html" class="menu-item">CONTACT</a>
+        </div>
+        <!-- Page Content -->
+    <div class="content-wrapper">
+        <h1>A Place Where you Learn, Grow and Excel</h1>
+        <p>Experience the pinnacle of academic excellence at our multidisciplinary and interdisciplinary university, where innovation flourishes and students are inspired to grow, excel, invent, and innovate.</p>
+        <p>Our vibrant community, comprising <span class="highlight">over 50,000 alumni,</span> coupled with on-campus hostel facilities and a focus on interactive learning, creates a dynamic environmen for personal and professional development.</p>
+        <p>Our state-of-the-art infrastructure supports cutting-edge research and technology, offering unparalleled opportunities for students to engage in groundbreaking discoveries.</p>
+        <p>Recognized as a premier institution for placements and internships, we provide a world-class education in a global setting, shaping the leaders of tomorrow.</p>
+        
+        <!-- Placeholder for image (640x360) -->
+        <img class="image-placeholder" alt="Add image here" 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9mycnYNUEOUhGZJ-eTRjm7-99S-ivxz_Skw&s" 
+        width="640" height="360" />
+        <!-- To add an image, copy the image URL and paste inside src="" above -->
+
+        <!-- Example Video Placeholder -->
+        <!-- <div class="video-placeholder">Video Placeholder - Add video here</div> -->
+
+        <h2>Campus Courses Specialization</h2>
+
+        <!-- Example table replicated from your attached content with discipline headings for clarity -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Campus</th>
+                    <th>Course</th>
+                    <th>Specialization</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.Tech Computer Science & Engineering</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.Tech Computer Science & Engineering (Data Sciences)</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B. Tech Computer Science & Engineering (Cyber Security)</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.Tech Computer Science & Engineering (Artificial Intelligence and Machine Learning)</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.Tech Robotics & AI</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.Tech Electronics & Communication Engineering</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.Tech Mechanical Engineering</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.tech Computer Science & Technology</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.Tech Aerospace Engineering</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B Voc Mechatronics</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B Voc CSE (Data Analytics)</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B Voc Tool Engineering</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B Voc Pharmaceutical Manufacturing technologies</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B Voc CSE (Computer Engineering and IT Infrastructure)</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>BCA - Bachelor of Computer Applications</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.Tech - Computer Science & Engineering (AI & Data Science)</td></tr>
+                <tr><td>School of Engineering</td><td>UG Programs</td><td>B.Tech - Computer Science & Engineering and Medical Engineering</td></tr>
+                <tr><td>School of Engineering</td><td>PG Programs</td><td>M.Tech - Computer Science & Engineering</td></tr>
+                <tr><td>School of Engineering</td><td>PG Programs</td><td>M.Tech - Embedded System</td></tr>
+                <tr><td>School of Engineering</td><td>PG Programs</td><td>M.Tech - Design Engineering</td></tr>
+                <tr><td>School of Engineering</td><td>PG Programs</td><td>MCA - Master of Computer Applications</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Additional tables can be added similarly following this format for each faculty -->
+
+        <p><em>Note: Ensure you scan the original documents, not photocopies.</em></p>
+    </div>
+    </body>
+</html>

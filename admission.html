@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
         <style>
             /* Reset */
 * {
@@ -91,6 +90,7 @@ body {
 .header-nav a:hover {
     color: #0B7A9A;
 }
+
 .enquire-btn {
     background-color: #FFD700;
     color: #333;
@@ -137,7 +137,113 @@ body {
 .menu-item.active {
     background-color: #095770;
 }
+.admissions-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.admissions-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
+    letter-spacing: 1px;
+}
+.admissions-subtitle {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+.admissions-main {
+    background: #FAF8E8;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    border-radius: 9px;
+    overflow: hidden;
+    padding: 30px 20px 40px 20px;
+}
 
+.admissions-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 38px;
+}
+
+.admissions-img {
+    width: 480px;
+    height: 240px;
+    background: #ccc;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #eee;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.11);
+    display: block;
+}
+
+.admissions-sidebar {
+    background: #F6ECD1;
+    box-shadow: 2px 2px 13px rgba(75, 57, 25, 0.09);
+    border-radius: 6px;
+    padding: 18px 28px;
+    min-width: 260px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #eadcbe;
+}
+
+.admissions-details {
+    margin: 15px 0 23px 0;
+}
+
+.admissions-details h2 {
+    margin-bottom: 10px;
+    color: #0B7A9A;
+    font-size: 1.18em;
+}
+
+.admissions-details ul, .admissions-details p {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.admissions-programs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    margin-top: 28px;
+}
+
+.programs-section {
+    background: #0B2455;
+    color: #f5f5f5;
+    border-radius: 7px;
+    padding: 18px 24px 14px 20px;
+    min-width: 340px;
+    flex: 1;
+    margin-bottom: 12px;
+}
+
+.programs-section h3 {
+    font-size: 1.05em;
+    margin-bottom: 13px;
+    color: #FFD700;
+    letter-spacing: 1px;
+}
+
+.programs-section ul {
+    margin-bottom: 12px;
+}
+
+.programs-section .major {
+    color: #FFD700;
+    font-weight: bold;
+}
 .dsu-footer {
   width: 100%;
   background: #19171C;
@@ -231,7 +337,7 @@ body {
         </div
         <div class="main-header">
             <div class="logo-section">
-                <img id="logo" src="https://www.dsu.edu.in/images/logo.jpg" style="width: 250px;height: 100px;">
+                <img id="logo" src="https://www.dsu.edu.in/templates/sj_university2/images/styling/default/logo.png">
             </div>
             <div class="header-nav">
                 <a href="#">Virtual Tour</a>
@@ -256,84 +362,78 @@ body {
             <a href="index.html" class="menu-item ">HOME</a>
             <a href="university.html" class="menu-item">UNIVERSITY</a>
             <a href="academics.html" class="menu-item">ACADEMICS</a>
-            <a href="admission.html" class="menu-item">ADMISSIONS</a>
+            <a href="" class="menu-item active">ADMISSIONS</a>
             <a href="international.html" class="menu-item">INTERNATIONAL</a>
             <a href="research.html" class="menu-item">RESEARCH</a>
             <a href="history.html" class="menu-item">HISTORY</a>
-            <a href="" class="menu-item active">PLACEMENT</a>
+            <a href="placement.html" class="menu-item">PLACEMENT</a>
             <a href="naac.html" class="menu-item">NAAC</a>
             <a href="library.html" class="menu-item">LIBRARY</a>
             <a href="hostel.html" class="menu-item">HOSTEL @ HAROHALLI</a>
-            <a href="https://www.dsu.edu.in/images/University/Public_Self_Disclosure_DSU.pdf"
-             class="menu-item">PUBLIC SELF-DISCLOSURE</a>
+            <a href="https://www.dsu.edu.in/images/University/Public_Self_Disclosure_DSU.pdf" 
+            class="menu-item">PUBLIC SELF-DISCLOSURE</a>
             <a href="contact.html" class="menu-item">CONTACT</a>
         </div>
-        <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;margin: 20px;">OVERVIEW</h1>
-        <img src="https://www.dsu.edu.in/images/placements/placement_banner.jpg" 
-        style="width: 1300px;height: 500px;align-self: center;margin-left: 20px;">
-        <div style="display: flex; max-width: 1500px; margin: 30px auto 0 auto; justify-content: flex-start;">
-
-    <!-- MAIN CONTENT -->
-    <div style="flex: 2; background: #fff; padding: 32px 48px 32px 24px; border-right: 1.5px solid #e0e0e0; min-height: 620px;">
-        <h2 style="color: #463e91; font-size: 1.9rem; margin-top: 0;">Training and Placement</h2>
-        <p style="font-size: 1.1rem; line-height: 1.7; color: #222; margin-bottom: 18px;">
-            The Training and Placement Cell believes in nurturing not just academic excellence but also holistic development that prepares students for the dynamic demands of the professional world. The Placement and Training Cell is a vital part of our vision, working to ensure that every student receives the guidance, exposure, and support necessary to secure a fulfilling and successful career.
-        </p>
-        <p style="font-size: 1.1rem; line-height: 1.7; color: #222; margin-bottom: 14px;">
-            The Placement & Training Cell serves as a bridge between academia and industry, equipping students with the right skills and knowledge through a comprehensive approach. From Technical Training to Soft Skills development, we focus on making students industry-ready, empowering them to excel in competitive job markets. With an impressive track record of high-profile placements and strong industry partnerships, we ensure that students have access to a wide array of career opportunities.
-        </p>
-        <ul style="margin: 22px 0 30px 24px; font-size: 1.07rem; color: #222; line-height: 1.6;">
-            <li style="margin-bottom: 6px; color: #e47a22;">
-                Placement Cell interacts with more than 500 reputed organizations for arranging campus interviews for the final year BE /B.Tech /M.Tech /B.Sc /M.Sc /MBA/ BCA/MCA/ BAJMC students.
-            </li>
-            <li style="margin-bottom: 6px; color: #e47a22;">
-                Improving the quality of placements in terms of job opportunities, companies of relevance that visit the campus and the highest and average salaries.
-            </li>
-        </ul>
-        <div style="font-weight: bold; font-size: 1.1rem; margin-top: 36px; margin-bottom: 7px; color: #252525;">MISSION</div>
-        <p style="font-size: 1.06rem; line-height: 1.65; color: #222;">
-            The mission of the Training and Placement Cell at Dayananda Sagar University is to enable and empower every student to acquire necessary skills, knowledge, and industry exposure to secure meaningful and successful careers.
-        </p>
-        <div style="font-weight: bold; font-size: 1.1rem; margin-top: 26px; margin-bottom: 7px; color: #252525;">VISION</div>
-        <p style="font-size: 1.06rem; line-height: 1.65; color: #222;">
-            To foster a culture of excellence and integrity, empowering students with the skills and opportunities to create a significant impact in the professional world.
-        </p>
+<!-- Main Content -->
+<div class="admissions-wrapper">
+    <h1 class="admissions-title">ADMISSIONS</h1>
+    <div class="admissions-subtitle">
+        DSU Admissions through: DSAT | Comed-K Code: E182 | Uni-Gauge Code Uni-010 | CET Code DSU-E240 | PGCET Code: M.Tech - T970 | PGCET Code: MBA - B365MB |
     </div>
 
-    <!-- SIDEBAR MENU -->
-    <div style="flex: 1; background: #463e91; min-width: 250px; border-radius: 0 10px 10px 0;">
-        <div style="background: #463e91; color: #fff; font-weight: bold; padding: 17px 24px; font-size: 1.11rem; border-radius: 0 10px 0 0;">
-            TRAINING AND PLACEMENT
+    <div class="admissions-main">
+        <!-- Image + Sidebar group -->
+        <div class="admissions-top">
+            <!-- Image (paste your image address below) -->
+            <img class="admissions-img" src="https://www.dsu.edu.in/images/Admission/admission_page_img.jpg" 
+            alt="Campus View" />
+            <!-- Sidebar with info -->
+            <div class="admissions-sidebar">
+                <div>DIRECT ADMISSIONS - 2026 (NON DSAT)</div>
+                <div>PROGRAMS, ELIGIBILITY &amp; FEE STRUCTURE</div>
+                <div>HOSTEL FEE</div>
+                <div>HELPLINE</div>
+                <div>FAQS</div>
+                <div>ADMISSION CLOSING DATES</div>
+            </div>
         </div>
-        <div style="background: #52a6dd; border-radius: 0 0 10px 10px;">
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none; background: none; font-size: 1rem;">Overview</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Announcement</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Campus Placements</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Esteemed Recruiters</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">CIL</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Facilities</a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none; background: #317fb5; font-style: italic;"><em>Testimonials</em></a></li>
-                <li><a href="#" style="display: block; color: #fff; padding: 13px 24px; text-decoration: none;">Contact Us</a></li>
+
+        <!-- Eligibility and more info below image/sidebar -->
+        <div class="admissions-details">
+            <h2>Eligibility Criteria (Sample)</h2>
+            <ul>
+                <li>UG: Must have passed 12th standard or equivalent with minimum 50% in relevant subjects</li>
+                <li>PG: Bachelor’s degree in relevant discipline with minimum 50% (aggregate)</li>
+                <li>For B.Tech: Mandatory subjects in 12th - Physics, Mathematics &amp; Chemistry/Computer Science</li>
+                <li>For Medical/Health Sciences: NEET or equivalent as required by program</li>
+                <li>For MBA: Bachelor's degree + valid entrance exam scores (CAT/MAT/XAT etc.)</li>
             </ul>
+            <p><strong>Documents Required:</strong> 12th marksheet, ID proof, recent photographs, caste certificate (if applicable), entrance exam scorecard.</p>
         </div>
-    </div>
-</div>
 
-<!-- VERTICAL ACTION BUTTONS -->
-<div style="position: fixed; right: 18px; top: 39%; z-index: 1000; display: flex; flex-direction: column; gap: 13px;">
-    <a href="login.html"><div style="width: 44px; height: 120px; background: #d53b49; color: #fff; border-radius: 7px 7px 0 0;
-        display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; font-weight: bold; letter-spacing: 2px; cursor: pointer; text-align: center;">
-        APPLY NOW
-    </div></a>
-    <div style="width: 44px; height: 44px; background: #f48a21; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-        &#x1F4DE;
-    </div>
-    <div style="width: 44px; height: 44px; background: #52e198; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-        &#x1F4F1;
-    </div>
-    <div style="width: 44px; height: 44px; background: #c357e1; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-        &#x1F310;
+        <!-- Programs Offered (Main Campus & Innovation Campus) -->
+        <div class="admissions-programs">
+            <div class="programs-section">
+                <h3>PROGRAMMES OFFERED AT DSU, MAIN CAMPUS</h3>
+                <ul>
+                    <li><span class="major">B.Tech.</span> Computer Science &amp; Engineering, Data Science, Cybersecurity, AI &amp; Robotics, Electronics &amp; Communication, Mechanical, Aerospace</li>
+                    <li><span class="major">M.Tech.</span> Computer Science &amp; Engineering, Embedded Systems, Design Engineering</li>
+                </ul>
+                <ul>
+                    <li><span class="major">School of Health Sciences:</span> B.Sc (MLT, Radiology, Anesthesia, Cardiac, Emergency Care), MPH, B.Pharm, Pharm D, Nursing (BSc, PB BSc)</li>
+                </ul>
+            </div>
+            <div class="programs-section">
+                <h3>PROGRAMMES OFFERED AT DSU, CITY INNOVATION CAMPUS</h3>
+                <ul>
+                    <li><span class="major">Commerce &amp; Management:</span> MBA (Business Analytics, Digital Marketing, Fintech), BBA, B.Com</li>
+                    <li><span class="major">Computer Applications:</span> BCA, MSc Data Science, MCA</li>
+                    <li><span class="major">Law:</span> BA LLB (Hons), BBA LLB, LLB</li>
+                    <li><span class="major">Mass Communication:</span> BA-JMC, B.Design (UX, Animation, VFX)</li>
+                    <li><span class="major">Basic Sciences:</span> B.Sc (Biochemistry, Genetics, Microbiology etc.)</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <!-- FOOTER SECTION -->
@@ -441,5 +541,5 @@ body {
     </div>
   </div>
 </div>
-        </body>
+    </body>
 </html>

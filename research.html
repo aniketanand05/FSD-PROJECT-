@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dayananda Sagar University — Inspired Template</title>
+  <style>
+ body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.8);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+}
+
+.logo h1 {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.logo p {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Nav Links */
+nav ul {
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav ul li a {
+  position: relative;
+  color: #334155;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #6366f1;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #4f46e5;
+}
+
+/* Apply Button */
+.apply-btn {
+  background: #4f46e5;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.apply-btn:hover {
+  background: #3730a3;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('https://www.dsu.edu.in/cache/resized/0793a218206e563e477b69f0f1649d1f.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 21, 45, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: 4rem;
+  animation: fadeUp 1s ease-in-out forwards;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-top: 0.8rem;
+  font-weight: 800;
+}
+
+.hero-content p {
+  margin-top: 0.8rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.tag {
+  background: #c7d2fe;
+  color: #1e3a8a;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.btn-group {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #4f46e5;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------- Sections ---------- */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.programs .grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 3rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.footer img {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.copy {
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  color: #94a3b8;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(255,255,255,0.95);
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #1e293b;
+  }
+
+  .hero-content {
+    margin-left: 1.5rem;
+  }
+}
+</style>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Header -->
+  <header class="navbar glass">
+    <div class="container">
+      <div class="nav-content">
+        <a href="#" class="logo">
+          <img src="https://www.dsu.edu.in/templates/sj_university2/images/styling/default/logo.png" alt="DSU logo">
+          <div>
+            <h1>Dayananda Sagar University</h1>
+            <p>Kanakapura Road, Bengaluru</p>
+          </div>
+        </a>
+
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="university.html">University</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admission.html">Admissions</a></li>
+            <li><a href="#" style="color: #3730a3;">Research</a></li>
+            <li><a href="placement.html">Placements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a href="https://admissions.dsu.edu.in" class="apply-btn">Apply Now</a>
+        <button id="menuBtn" class="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <span class="tag">Top University • Bengaluru</span>
+      <h2>Shaping Careers with Research-Driven Education</h2>
+      <p>We combine rigorous academics, industry-aligned programs and a vibrant campus to prepare students for future careers in engineering, management, sciences and the arts.</p>
+      <div class="btn-group">
+        <a href="https://admissions.dsu.edu.in" class="btn-primary">Apply Now</a>
+        <a href="#" class="btn-outline">Virtual Tour</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Announcements -->
+  <section class="announcements container">
+    <div class="card">
+      <h3>📢 Announcements</h3>
+      <ul>
+        <li>Admissions open for 2026 — apply now for UG & PG programs.</li>
+        <li>Ph.D. admissions now accepting applications (July 2026 intake).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="programs container">
+    <h2 class="section-title">Schools & Programs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Schools</h3>
+        <p>Engineering • Computer Applications • Commerce & Management • Health Sciences • Design & Arts</p>
+      </div>
+      <div class="card">
+        <h3>Undergraduate & Postgraduate</h3>
+        <p>B.Tech, BBA, BCA, B.Com, M.Tech, MBA, M.Sc — industry aligned curricula and hands-on labs.</p>
+      </div>
+      <div class="card">
+        <h3>Research & Innovation</h3>
+        <p>Active sponsored projects, incubation initiatives and partnerships with tech leaders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="https://www.dsu.edu.in/cache/resized/f6c1f0eb199878cdcb4ca038bd4dad96.jpg" alt="DSU logo">
+        <p>Devarakaggalahalli, Harohalli, Kanakapura Road, Bengaluru — 562112</p>
+        <p>Phone: 080 46461800 • admissions@dsu.edu.in</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Placements</a></li>
+          <li><a href="#">E-brochure</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+        <p class="copy">© <span id="year"></span> Dayananda Sagar University</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.querySelector('nav ul').classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
