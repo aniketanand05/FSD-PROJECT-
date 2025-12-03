@@ -178,5 +178,34 @@
         <!-- Debug: Extra links -->
 
     </div>
+    <script>
+document.querySelector(".login-btn").addEventListener("click", async () => {
+    
+    const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        state: document.getElementById("state").value,
+        city: document.getElementById("city").value,
+        phone: document.getElementById("phone").value,
+        campus: document.getElementById("campus").value,
+        program: document.getElementById("program").value
+    };
+
+    const response = await fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if(result.success) {
+        alert("Successfully Registered!");
+    } else {
+        alert("Error: " + result.error);
+    }
+});
+</script>
+
 </body>
 </html>

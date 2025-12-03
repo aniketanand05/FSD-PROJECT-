@@ -1,198 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>History | Dayananda Sagar University</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background-color: #150050;
-      color: white;
-    }
+    <meta charset="UTF-8">
+    <title>History - Dayananda Sagar University</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
 
-    header {
-      background-color: #0077b6;
-      color: white;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        body {
+            background-color: #f5f5f5;
+            color: #333333;
+            line-height: 1.6;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
+        /* Simple top bar */
+        .top-bar {
+            background-color: #002147;
+            color: #ffffff;
+            padding: 10px 60px;
+            font-size: 14px;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-    }
+        /* Header / logo area */
+        header {
+            background-color: #ffffff;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #dddddd;
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(90deg, #150050, #3f0071);
-      padding: 60px 80px;
-    }
+        .logo-text h1 {
+            font-size: 26px;
+            color: #002147;
+            letter-spacing: 1px;
+        }
 
-    .hero-text {
-      max-width: 55%;
-    }
+        .logo-text span {
+            font-size: 12px;
+            color: #666666;
+        }
 
-    .hero-text h2 {
-      font-size: 32px;
-      margin-bottom: 15px;
-      color: #ffdd00;
-    }
+        /* Navigation */
+        nav {
+            margin-left: 40px;
+        }
 
-    .hero-text p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+        nav a {
+            text-decoration: none;
+            color: #333333;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
 
-    .hero button {
-      margin-top: 20px;
-      background-color: #ffdd00;
-      color: #150050;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+        nav a:hover {
+            color: #007bff;
+        }
 
-    .hero button:hover {
-      background-color: #ffe66d;
-    }
+        /* Banner / page title area */
+        .page-banner {
+            background: linear-gradient(to right, #002147, #0056b3);
+            color: #ffffff;
+            padding: 40px 60px;
+        }
 
-    .hero img {
-      width: 350px;
-      border-radius: 10px;
-    }
+        .page-banner h2 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
 
-    footer {
-      background-color: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-    }
+        .breadcrumb {
+            font-size: 14px;
+            color: #e0e0e0;
+        }
 
-    .program-section {
-      background-color: #1a0033;
-      padding: 40px 80px;
-      text-align: center;
-    }
+        /* Main content wrapper */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto 50px auto;
+            padding: 0 20px;
+        }
 
-    .program-section h3 {
-      font-size: 26px;
-      color: #ffdd00;
-      margin-bottom: 30px;
-    }
+        .content-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+        }
 
-    .programs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
+        .content-card h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #002147;
+        }
 
-    .program-card {
-      background-color: #2a0055;
-      border-radius: 10px;
-      padding: 20px;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s;
-    }
+        .content-card h3 {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #0056b3;
+        }
 
-    .program-card:hover {
-      transform: translateY(-5px);
-    }
+        .content-card h4 {
+            font-size: 18px;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            color: #333333;
+        }
 
-    .program-card h4 {
-      color: #ffdd00;
-      margin-bottom: 10px;
-    }
+        .content-card p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
 
-    .apply-btn {
-      display: inline-block;
-      background-color: #ffdd00;
-      color: #150050;
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 30px;
-    }
+        .content-card ul {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
 
-    .apply-btn:hover {
-      background-color: #ffe66d;
-    }
-  </style>
+        .content-card li {
+            margin-bottom: 6px;
+        }
+
+        /* Simple footer */
+        footer {
+            background-color: #002147;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            margin-top: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .page-banner {
+                padding: 25px 20px;
+            }
+
+            .container {
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Dayananda Sagar University</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#">University</a>
-      <a href="academics.html">Academics</a>
-      <a href="#">Admissions</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Admissions Open 2026–27</h2>
-      <p>Programs Offered @ DSU City Innovation Campus</p>
-      <a href="login.html" target="_blank" class="apply-btn">Apply Now</a>
+    <div class="top-bar">
+        Dayananda Sagar University · Bengaluru, India
     </div>
-    <img src="https://www.dsu.edu.in/cache/resized/20bee6f4c1d2a5457e63a55f233e2e94.jpg" alt="Student Image" style="width: 100%;">
-  </section>
 
-  <section class="program-section">
-    <h3>Schools & Programs</h3>
-    <div class="programs">
-      <div class="program-card">
-        <h4>School of Commerce & Management Studies</h4>
-        <p>MBA | BBA | B.Com</p>
-      </div>
-      <div class="program-card">
-        <h4>School of Arts, Design & Humanities</h4>
-        <p>BA – JMC</p>
-      </div>
-      <div class="program-card">
-        <h4>School of Basic & Applied Sciences</h4>
-        <p>B.Sc. | M.Sc.</p>
-      </div>
-      <div class="program-card">
-        <h4>School of Design & Digital Transmedia</h4>
-        <p>B.Design</p>
-      </div>
-      <div class="program-card">
-        <h4>School of Law (Approved by BCI)</h4>
-        <p>B.A. LL.B (Hons.) | B.B.A., LL.B (Hons.) | LL.B | LL.M</p>
-      </div>
-      <div class="program-card">
-        <h4>School of Computer Applications</h4>
-        <p>BCA | BCA in AI & Data Science | MCA<br>B.Sc. (Data Science) | B.Sc. (Cybersecurity)<br>M.Sc. (Data Science) | M.Sc. (Cybersecurity)</p>
-      </div>
-    </div>
-  </section>
+    <header>
+        <div class="logo-text">
+            <h1>Dayananda Sagar University</h1>
+            <span>Shaping the future of education</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="admission.html">Admissions</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-  <footer>
-    © 2025 Dayananda Sagar University | All Rights Reserved
-  </footer>
+    <section class="page-banner">
+        <h2>History</h2>
+        <div class="breadcrumb">
+            Home / About / History
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="content-card">
+            <h2>Founding Pillars</h2>
+            <p>
+                The Dayananda Sagar Schools and Colleges of Science, Arts and Commerce were established in the early nineteen sixties and have grown into one of India’s prominent education hubs under the Mahatma Gandhi Vidya Peetha Trust in Bengaluru.
+            </p>
+            <p>
+                Over the years, the institutions have expanded their reach across diverse disciplines, providing quality education and a vibrant learning ecosystem for students from different parts of the country and abroad.
+            </p>
+
+            <h3>Late Shri R Dayananda Sagar</h3>
+            <p>
+                Late Shri R Dayananda Sagar was the visionary founder whose dedication to education laid the strong foundation for the Dayananda Sagar group of institutions.
+            </p>
+
+            <h3>Late Smt Chandramma Sagar</h3>
+            <p>
+                Late Smt Chandramma Sagar supported and strengthened this vision, contributing to the growth of the institutions and their commitment to academic excellence.
+            </p>
+
+            <h3>Growth of the Institutions</h3>
+            <p>
+                The institutions offer programs ranging from pre-university to postgraduate and doctoral levels in multiple domains.
+            </p>
+            <ul>
+                <li>Engineering and Technology</li>
+                <li>Dental Sciences and Health Sciences</li>
+                <li>Biological Sciences and Allied Health</li>
+                <li>Arts, Commerce and Basic Sciences</li>
+                <li>Pharmacy, Nursing and Management Studies</li>
+                <li>Information Technology and Emerging Areas</li>
+            </ul>
+            <p>
+                New courses and research-oriented programs continue to be added in response to technological progress and industry needs.
+            </p>
+
+            <h3>Academic and Campus Environment</h3>
+            <p>
+                Students benefit from well-equipped classrooms, laboratories, libraries and computing facilities, complemented by active research and collaborative projects.
+            </p>
+            <p>
+                The campus also provides strong support systems including sports infrastructure, hostels and cultural activities to ensure holistic development.
+            </p>
+
+            <h3>Dayananda Sagar University: A New Phase</h3>
+            <p>
+                Building on the legacy of Dayananda Sagar Institutions, Dayananda Sagar University represents a new phase as a State Private University committed to nurturing global citizens.
+            </p>
+            <p>
+                In tune with initiatives such as Make in India and the start-up ecosystem, the university focuses on fostering innovation, entrepreneurship and leadership among students.
+            </p>
+            <p>
+                The academic framework encourages competency across multiple domains, with emphasis on technology, management, networking, marketing, finance and appreciation of art and culture.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Dayananda Sagar University · All rights reserved.
+    </footer>
+
 </body>
 </html>

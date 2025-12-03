@@ -20,13 +20,13 @@
                 <img id="logo" src="https://www.dsu.edu.in/templates/sj_university2/images/styling/default/logo.png">
             </div>
             <div class="header-nav">
-                <a href="#">Virtual Tour</a>
+                <a href="https://dsu.edu.in/virtual-tour/">Virtual Tour</a>
                 <a href="#">Examination</a>
                 <a href="#">News & Events</a>
                 <a href="#">Newsletter</a>
                 <a href="#">Alumni</a>
                 <a href="#">Blog</a>
-                <a href="#">ERP Login</a>
+                <a href="https://ums.mydsi.org/Login.aspx/DSU">ERP Login</a>
                 <a href="#">e-Brochure</a>
                 <button class="enquire-btn">Enquire Now</button>
                 <select class="language-select">
@@ -137,5 +137,21 @@
             </a>
         </div>
         </div>
+        <script src="server.js"></script>
+        <script>
+document.querySelector('.search-container button').addEventListener('click', function() {
+    const query = document.querySelector('.search-container input').value;
+    fetch('/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: query })
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.results[0]);
+    });
+});
+
+        </script>
     </body>
 </html>
